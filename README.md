@@ -1,5 +1,5 @@
 # Telnyx Video SDK for iOS
-This repository contains releases of Telnyx's Video SDK for iOS. These releases can be installed as a CocoaPod or manually into your project.
+This repository contains releases of Telnyx's Video SDK for iOS. Currently a release is installed through CocoaPods.
 
 ## Adding Telnyx Video SDK to your iOS Client Application:
 Currently the Video SDK is delivered through Cocoapods. 
@@ -11,7 +11,7 @@ If your xcode project is not using [cocoapods](https://cocoapods.org/) yet, you 
 1. Open your podfile and add the TelnyxVideoSdk
 
 ```
-pod 'TelnyxVideoSdk', '~> 0.0.1'
+pod 'TelnyxVideoSdk', '~> 0.0.3'
 ```
 
 2. At the end of your podfile also add the following post_install sequence:
