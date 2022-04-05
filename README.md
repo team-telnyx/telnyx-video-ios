@@ -1,20 +1,21 @@
 # Telnyx Video SDK for iOS
 This repository contains releases of Telnyx's Video SDK for iOS. Currently a release is installed through CocoaPods.
 
-## Adding Telnyx Video SDK to your iOS Client Application:
+## Adding Telnyx Video SDK to your iOS project:
 Currently the Video SDK is delivered through Cocoapods. 
 
 ### Cocoapods
 
-If your xcode project is not using [cocoapods](https://cocoapods.org/) yet, you will need to configure it.
+If your xcode project is not using [Cocoapods](https://cocoapods.org/) yet, you will need to configure it.
 
 1. Open your podfile and add the TelnyxVideoSdk
 
 ```
-pod 'TelnyxVideoSdk', '~> 0.0.3'
+pod 'TelnyxVideoSdk
 ```
 
-2. At the end of your podfile also add the following post_install sequence:
+2. When XCFramework is generated, it must have the `BUILD_LIBRARY_FOR_DISTRIBUTION` flag set to `YES`. When distributing the XCFramework through Cocoapods, the XCFramework's dependencies should also have `BUILD_LIBRARY_FOR_DISTRIBUTION` set to `YES` to avoid getting `dyld: Symbol not found` error in runtime. 
+To achieve this, the following `post_install` script must be added to your Podfile:
 
 ```
 post_install do |installer|
@@ -26,6 +27,7 @@ post_install do |installer|
 end
 ```
 
+
 Your podfile should look something like this: 
 
 ```
@@ -35,7 +37,7 @@ target 'YOUR_APP_TARGET' do
   use_frameworks!
 
   # Pods for YOUR_APP_TARGET
-  pod 'TelnyxVideoSdk', '~> 0.0.1'
+  pod 'TelnyxVideoSdk'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
