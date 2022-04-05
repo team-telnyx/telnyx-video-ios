@@ -48,12 +48,12 @@ target 'YOUR_APP_TARGET' do
 end
 ```
 
-3. Install your pods. You can add the flag --repo-update to ensure your cocoapods has the specs updated.
+3. Install your pods:
 
 ```Bash
-pod install --repo-update
+pod install
 ```
-4. Open your .xcworkspace 
+4. Open your `.xcworkspace` 
 
 5. Import TelnyVideoSdk at the top level of your class:
 
@@ -61,7 +61,7 @@ pod install --repo-update
 import TelnyxVideoSdk
 ```
 
-6. Disable BITCODE: Go to the Build Settings tab of your project target, search for “bitcode” and set it to “NO”
+6. Disable BITCODE: Go to the Build Settings tab of your `Target`, search for `bitcode` keyword and set it to `NO`.
 
 7. You are all set! 🚀
 </br>
