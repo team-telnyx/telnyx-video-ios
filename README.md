@@ -14,7 +14,7 @@ If your xcode project is not using [Cocoapods](https://cocoapods.org/) yet, you 
 pod 'TelnyxVideoSdk
 ```
 
-2. When XCFramework is generated, it must have the `BUILD_LIBRARY_FOR_DISTRIBUTION` flag set to `YES`. When distributing the XCFramework through Cocoapods, the XCFramework's dependencies should also have `BUILD_LIBRARY_FOR_DISTRIBUTION` set to `YES` to avoid getting `dyld: Symbol not found` error in runtime. 
+2. When XCFramework is generated, it must have the `BUILD_LIBRARY_FOR_DISTRIBUTION` flag set to `YES`. When distributing the XCFramework through Cocoapods, the XCFramework's dependencies should also have `BUILD_LIBRARY_FOR_DISTRIBUTION` set to `YES` to avoid getting `dyld: Symbol not found` error in runtime.
 To achieve this, the following `post_install` script must be added to your Podfile:
 
 ```
@@ -26,7 +26,6 @@ post_install do |installer|
     end
 end
 ```
-
 
 Your podfile should look something like this: 
 
@@ -62,11 +61,7 @@ pod install --repo-update
 import TelnyxVideoSdk
 ```
 
-6. Disable BITCODE: Go to the Build Settings tab of your app target, search for “bitcode” and set it to “NO”
+6. Disable BITCODE: Go to the Build Settings tab of your project target, search for “bitcode” and set it to “NO”
 
-7. Go to your Info.plist file and add the “Privacy - Microphone Usage Description” key with a description that your app requires microphone. 
- 
-8. Go to your Info.plist file and add the “Privacy - Camera Usage Description” key with a description that your app requires access to cameras.
-
-9. You are all set! 🚀
+7. You are all set! 🚀
 </br>
