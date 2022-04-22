@@ -16,8 +16,9 @@ Like the on screen instructions mention, this will create two files: a `Podfile`
 ### Adding the sdk to your project
 1\. Open your podfile and add the TelnyxVideoSdk
 
-```swift
-pod 'TelnyxVideoSdk'
+target 'TARGET_NAME' do
+    pod 'TelnyxVideoSdk', '~> 0.0.5'
+end
 ```
 
 2\. Add the `post_install` script to your Podfile
