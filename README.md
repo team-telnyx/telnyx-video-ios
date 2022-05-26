@@ -17,7 +17,7 @@ Like the on screen instructions mention, this will create two files: a `Podfile`
 1\. Open your podfile and add the TelnyxVideoSdk
 
 target 'TARGET_NAME' do
-		pod 'TelnyxVideoSdk', '~> 0.2.1'
+		pod 'TelnyxVideoSdk', '~> 0.2.2'
 end
 ```
 
